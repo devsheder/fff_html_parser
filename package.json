@@ -1,0 +1,15 @@
+{
+  "name": "fff-html-parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devsheder/fff_html_parser.git"
+  },
+  "author": "devsheder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devsheder/fff_html_parser/issues"
+  }
+}
