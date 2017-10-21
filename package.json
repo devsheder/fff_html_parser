@@ -11,5 +11,10 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/devsheder/fff_html_parser/issues"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "dom": "0.0.3",
+    "parse5": "^3.0.2"
   }
 }
