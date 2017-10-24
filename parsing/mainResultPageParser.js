@@ -23,7 +23,7 @@ $('.bloc_result').each((index, resultBlock) => {
     // Score images
     if ($(resultBlock).find('.score > img').length > 0) {
         // The score is set, let's go get it on "En savoir plus" page
-        result.matchUrl = "https://www.fff.fr" + $('.more-infos-game').attr("href");
+        result.matchUrl = $('.more-infos-game').attr("href");
     }
 
     results.push(result);
