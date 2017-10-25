@@ -1,6 +1,5 @@
 const fs = require("fs");
 const cheerio = require('cheerio');
-const html = require("fs").readFileSync("sample.html").toString();
 const MatchResult = require("./MatchResult")
 
 module.exports = {
