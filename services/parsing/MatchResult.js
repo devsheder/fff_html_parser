@@ -6,18 +6,16 @@ class MatchResult {
      * Constructor
      * @param {String} label 
      * @param {String} homeTeamName
-     * @param {String} homeTeamScoreUrl
      * @param {String} awayTeamName
-     * @param {String} awayTeamScoreUrl
      * @param {String} matchUrl
+     * @param {Score} score
      */
-    constructor(label, homeTeamName, homeTeamScoreUrl, awayTeamName, awayTeamScoreUrl, matchUrl) {
+    constructor(label, homeTeamName, awayTeamName, matchUrl, score) {
         this.label = label;
         this.homeTeamName = homeTeamName;
-        this.homeTeamScoreUrl = homeTeamScoreUrl;
         this.awayTeamName = awayTeamName;
-        this.awayTeamScoreUrl = awayTeamScoreUrl;
         this.matchUrl = matchUrl;
+        this.score = score;
     }
 }
 
