@@ -1,7 +1,10 @@
 const fs = require("fs");
 const ParsingService = require("../FFFParsing.service");
 
-const html = fs.readFileSync("sample.html").toString();
-results = ParsingService.parseResultsOfLastWeekEnd(html);
+const resultsHtml = fs.readFileSync("sample.html").toString();
+results = ParsingService.parseResultsOfLastWeekEnd(resultsHtml);
+console.log(results);
 
-fs.writeFileSync("weekEndResults.json", JSON.stringify(results));
+const scoreHtml = fs.readFileSync("sampleScore.html").toString();
+score = ParsingService.parseMatchScore(scoreHtml);
+console.log(score);

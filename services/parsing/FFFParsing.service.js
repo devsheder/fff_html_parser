@@ -1,12 +1,14 @@
 const fs = require("fs");
 const cheerio = require('cheerio');
-const MatchResult = require("./MatchResult")
+const MatchResult = require("./MatchResult");
+const Score = require("./Score");
+const scoreSeparator = '-';
 
 module.exports = {
     /**
      * Parse the html to get results array of the last weekend
      * @param {String} html the html to parse
-     * @returns {Array} Array of MatchResult objects
+     * @returns {Array} Array of MatchResult objects or empty array
      */
     parseResultsOfLastWeekEnd: function(html) {
         $ = cheerio.load(html);
@@ -37,5 +39,24 @@ module.exports = {
         });
         
         return results;
+    },
+
+    /**
+     * Parse the html to get the score of a match
+     * @param {String} html the html to parse
+     * @returns {Score} score of the match or null
+     */
+    parseMatchScore: function(html) {
+        $ = cheerio.load(html);
+
+        let scoreText = $('.score-match-details').text();
+        let score = null;
+
+        if (scoreText && scoreText.indexOf(scoreSeparator) >= 0) {
+            let splitScore = scoreText.trim().split(scoreSeparator);
+            score = new Score(splitScore[0], splitScore[1]);
+        }
+        
+        return score;
     }
 }
